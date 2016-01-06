@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "name": "com.spi.biopocket",
+    "cordova_name": "Biopocket",
+    "description": "SecitonPi Plugin",
+    "license": "Apache 2.0",    
+    "keywords": [
+        "Cordova",
+        "Biopocket"
+    ],
+    "platforms": [
+        "android"        
+    ],
+    "engines": []
+}

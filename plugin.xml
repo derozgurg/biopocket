@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.spi.biopocket" version="0.0.1">
+        <name>Bio Pocket</name>
+        <description>SP Biotekno pocket apps plugin</description>
+        <license>SP</license>
+        <keywords>cordova,bio,pocket apps</keywords>
+
+	    <js-module src="www/biopocket.js" name="Biopocket">
+            <clobbers target="Biopocket" />
+        </js-module>
+	    <js-module src="www/pocketconfig.js" name="BiopocketConfig">
+	        <clobbers target="BiopocketConfig" />
+	    </js-module>
+		
+        <platform name="android">
+			<config-file target="res/xml/config.xml" parent="/*">
+			  <feature name="Biopocket">
+				<param name="android-package" value="com.spi.biopocket.Biopocket"/>
+				<param name="onload" value="true" />
+			  </feature>
+			</config-file>
+			<source-file src="src/android/Biopocket.java" target-dir="src/com/spi/biopocket/" />
+			<source-file src="src/android/OnReceiveHandler.java" target-dir="src/com/spi/biopocket/" />
+			<source-file src="src/android/OnReceiveHandlerIF.java" target-dir="src/com/spi/biopocket/" />
+			<source-file src="src/android/PockBroadcastReceiver.java" target-dir="src/com/spi/biopocket/" />
+			<source-file src="src/android/PluginAction.java" target-dir="src/com/spi/biopocket/" />				
+		</platform>  
+    </plugin>
